@@ -9,7 +9,7 @@ resource "aws_security_group" "allow_http_ssh" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Allow from anywhere
+    cidr_blocks = ["0.0.0.0/0"]  
   }
 
   # Ingress rule for SSH (port 22)
@@ -17,7 +17,7 @@ resource "aws_security_group" "allow_http_ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Allow SSH access from anywhere (adjust as needed)
+    cidr_blocks = ["0.0.0.0/0"]  
   }
 
   # Egress rule (allow all outbound traffic)
